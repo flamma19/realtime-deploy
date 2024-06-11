@@ -21,7 +21,7 @@ EXPOSE 4000
 
 # Set the healthcheck
 HEALTHCHECK --start-period=5s --interval=5s --timeout=5s --retries=3 \
-  CMD curl -sSfL --head -o /dev/null -H "Authorization: Bearer ${ANON_KEY}" "http://localhost:4000/api/tenants/realtime-dev/health"
+  CMD curl -sSfL --head -o /dev/null -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogImFub24iLAogICJpc3MiOiAic3VwYWJhc2UiLAogICJpYXQiOiAxNzE4MDUxNDAwLAogICJleHAiOiAxODc1ODE3ODAwCn0.eu_a_0KlFWVpekdJMx-YzhSMKFLO65tylGlErrprtAU" "http://localhost:4000/api/tenants/realtime-dev/health"
 
 # Start the realtime server
 ENTRYPOINT ["/bin/sh", "-c", "/app/bin/migrate && /app/bin/realtime eval 'Realtime.Release.seeds(Realtime.Repo)' && /app/bin/server"]
