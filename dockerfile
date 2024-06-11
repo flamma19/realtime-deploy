@@ -2,7 +2,7 @@ FROM supabase/realtime:v2.28.32
 
 # Set environment variables
 ENV PORT=4000
-ENV DB_HOST="supabase-postgres.tank.svc"
+ENV DB_HOST="db.tank.svc"
 ENV DB_PORT=5432
 ENV DB_USER="postgres"
 ENV DB_PASSWORD="TPPQ3jvvPQ4RLoanWnefPeFiLdYly8vr"
