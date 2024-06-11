@@ -4,7 +4,7 @@ FROM supabase/realtime:v2.28.32
 ENV PORT="4000"
 ENV DB_HOST="db.tank.svc"
 ENV DB_PORT="5432"
-ENV DB_USER="postgres"
+ENV DB_USER="supabase_admin"
 ENV DB_PASSWORD="TPPQ3jvvPQ4RLoanWnefPeFiLdYly8vr"
 ENV DB_NAME="postgres"
 ENV DB_AFTER_CONNECT_QUERY='SET search_path TO *realtime'
