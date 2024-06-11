@@ -17,6 +17,8 @@ ENV ERL_AFLAGS="-proto_dist inet_tcp"
 ENV ENABLE_TAILSCALE="false"
 ENV DNS_NODES="''"
 
+EXPOSE 4000
+
 # Set the healthcheck
 HEALTHCHECK --start-period=5s --interval=5s --timeout=5s --retries=3 \
   CMD curl -sSfL --head -o /dev/null -H "Authorization: Bearer ${ANON_KEY}" "http://localhost:4000/api/tenants/realtime-dev/health"
